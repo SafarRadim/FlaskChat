@@ -1,0 +1,29 @@
+body{
+	background-color: #FFF;
+	margin: 0;
+}
+.mes-rec{
+	max-width: 70%;
+	margin: auto;
+	background-color: rgba(20,20,20,.50);
+	border-radius: 0.125rem 1rem 1rem 1rem;
+	padding: 0 .6rem;
+	margin-top: 1rem;
+	text-align: left;
+	color: rgba(255,255,255,.9);
+	border: 0;
+}
+.mes-sent{
+	max-width: 70%;
+	margin: auto;
+	background-color: #3578E5;
+	border-radius: 1rem 1rem 0.125rem 1rem;
+	padding: 0 .6rem;
+	margin-top: 1rem;
+	text-align: left;
+	color: rgba(255,255,255);
+}
+.padding1{
+	padding: .3rem;
+	text-align: right;
+}

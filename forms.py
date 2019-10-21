@@ -6,5 +6,12 @@ from wtforms.validators import DataRequired
 class MessageForm(FlaskForm):
     message = wtf.StringField('Message', validators=[DataRequired()])
 
+
 class LoginForm(FlaskForm):
     username = wtf.StringField('Username', validators=[DataRequired()])
+    password = wtf.PasswordField('Password', validators=[DataRequired()])
+
+
+class RegisterForm(FlaskForm):
+    username = wtf.StringField('Username', validators=[DataRequired()])
+    password = wtf.PasswordField('Password', validators=[DataRequired()])

@@ -2,12 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="5">
+    <link rel="stylesheet" type="text/css" href="/static/style/style.css">
     <title>Index</title>
 </head>
 <body>
 {% for message in messages %}
-    {{ message }} <br>
+    {% if message.username.username == logged %}
+        <div class="mes-sent">
+        <p class="padding1">
+            {{ message.message }}
+        </p>
+        </div>
+    {% else %}
+        <div class="mes-rec">
+        <p class="padding1">
+            {{ message.message }}
+        </p>
+        </div>
+    {% endif %}
 {% endfor %}
 
 <form action="{{ url }}" method="POST">
