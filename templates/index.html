@@ -2,14 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/static/style/style.css">
     <title>Index</title>
 </head>
 <body>
-{% for message in messages %}\
-    {{ message }} <br>
+{% for message in messages %}
+    {% if message.username.username == logged %}
+        <div class="mes-sent">
+        <p class="padding1">
+            {{ message.message }}
+        </p>
+        </div>
+    {% else %}
+        <div class="mes-rec">
+        <p class="padding1">
+            {{ message.message }}
+        </p>
+        </div>
+    {% endif %}
 {% endfor %}
 
-<form method="POST" action="/">
+<form action="{{ url }}" method="POST">
     {{ form.csrf_token }}
     {{ form.message.label }} {{ form.message (size = 20) }}
     <input type="submit" value="Go">
