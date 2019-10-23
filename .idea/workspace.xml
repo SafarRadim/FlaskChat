@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="85156c45-3921-4a67-8989-d512655359cf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/chat.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/TymovkaPoc.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TymovkaPoc.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/register.html" afterDir="false" />
-    </list>
+    <list default="true" id="85156c45-3921-4a67-8989-d512655359cf" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,7 +157,7 @@
       <workItem from="1571737806724" duration="911000" />
       <workItem from="1571747416152" duration="2494000" />
       <workItem from="1571768305237" duration="910000" />
-      <workItem from="1571830832100" duration="5055000" />
+      <workItem from="1571830832100" duration="5307000" />
     </task>
     <task id="LOCAL-00001" summary="One man chat">
       <created>1570626551693</created>
@@ -190,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571835162533</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added links to other pages&#10;better UI">
+      <created>1571836440624</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1571836440624</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -213,7 +210,8 @@
     <MESSAGE value="One man chat" />
     <MESSAGE value="Added login functionality&#10;chat now displays user who sent message&#10;added simple meta tag refresh" />
     <MESSAGE value="added sockets into the app&#10;reworked app.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="added sockets into the app&#10;reworked app.py" />
+    <MESSAGE value="added links to other pages&#10;better UI" />
+    <option name="LAST_COMMIT_MESSAGE" value="added links to other pages&#10;better UI" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/TymovkaPoc$TymovkaPoc.coverage" NAME="TymovkaPoc Coverage Results" MODIFIED="1571731902671" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
