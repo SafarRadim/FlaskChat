@@ -2,31 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="/static/style/style.css">
     <title>Index</title>
 </head>
 <body>
-{% for message in messages %}
-    {% if message.username.username == logged %}
-        <div class="mes-sent">
-        <p class="padding1">
-            {{ message.message }}
-        </p>
-        </div>
-    {% else %}
-        <div class="mes-rec">
-        <p class="padding1">
-            {{ message.message }}
-        </p>
-        </div>
-    {% endif %}
-{% endfor %}
+Welcome to the most basic chat you have ever seen! <br>
 
-<form action="{{ url }}" method="POST">
-    {{ form.csrf_token }}
-    {{ form.message.label }} {{ form.message (size = 20) }}
-    <input type="submit" value="Go">
-</form>
+
+{% if user == None %}
+    Please, <a href="/login">login</a> or <a href="/register">register</a>
+{% else %}
+    Hello {{ user }} <br>
+    Chat is <a href="/chat">here</a>
+{% endif %}
 
 </body>
 </html>

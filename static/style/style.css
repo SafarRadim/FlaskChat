@@ -9,7 +9,6 @@ body{
 	border-radius: 0.125rem 1rem 1rem 1rem;
 	padding: 0 .6rem;
 	margin-top: 1rem;
-	text-align: left;
 	color: rgba(255,255,255,.9);
 	border: 0;
 }
@@ -20,10 +19,14 @@ body{
 	border-radius: 1rem 1rem 0.125rem 1rem;
 	padding: 0 .6rem;
 	margin-top: 1rem;
-	text-align: left;
-	color: rgba(255,255,255);
+	color: rgba(255,255,255, 255);
 }
-.padding1{
+.paddingR{
 	padding: .3rem;
 	text-align: right;
+}
+
+.paddingL{
+	padding: .3rem;
+	text-align: left;
 }
