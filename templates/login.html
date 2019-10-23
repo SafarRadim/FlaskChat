@@ -5,8 +5,9 @@
     <title>Login</title>
 </head>
 <body>
+<a href="/">Index</a><br>
 {% if err != None %}
-    {{ err }}
+    {{ err }}<br>
 {% endif %}
 <form method="POST" action="/login">
     {{ form.csrf_token }}

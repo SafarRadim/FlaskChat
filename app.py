@@ -40,22 +40,23 @@ def handle_message(message):
 
 @app.route('/')
 def index():
+    user = None
     if 'username' in session:
-        return "logged in as {}".format(session['username'])
-    return 'You are not logged in'
+        user = session['username']
+    return render_template('index.html', user=user)
 
 
 @app.route('/logout')
 def logout():
     session.pop('username', None)
-    return redirect(url_for('login'))
+    return redirect(url_for('index'))
 
 
 @app.route('/chat', methods=('POST', 'GET'))
 def chat():
     if 'username' in session:
         messages = Message.query.all()
-        return render_template("index.html", messages=messages)
+        return render_template("chat.html", messages=messages)
     else:
         return "please, log in at /login"
 
@@ -86,7 +87,7 @@ def register():
         newUser = User(username=request.form['username'], password=request.form['password'])
         db.session.add(newUser)
         db.session.commit()
-        redirect(url_for('login'))
+        return redirect(url_for('login'))
     return render_template("register.html", form=form)
 
 

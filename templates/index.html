@@ -2,42 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="/static/style/style.css">
     <title>Index</title>
 </head>
 <body>
-<script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js" integrity="sha256-yr4fRk/GU1ehYJPAs8P4JlTgu0Hdsp4ZKrx8bDEDC3I=" crossorigin="anonymous"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script type="text/javascript" charset="utf-8">
-$(document).ready(function () {
-    var socket = io.connect();
+Welcome to the most basic chat you have ever seen! <br>
 
-    socket.on('connect', function () {
-        console.log('user has connected!');
-    });
 
-    socket.on('message', function (msg) {
-        $('#messages').append('<li>'+msg+"</li>");
-        console.log('recieved message');
-    });
-
-    $('#sendButton').on('click', function () {
-      socket.send($('#myMessage').val());
-      $('#myMessage').val('')
-    })
-
-})
-</script>
-
-<ul id="messages">
-{% for message in messages %}
-    <li>{{ message.username.username }}> {{ message.message }} </li>
-{% endfor %}
-</ul>
-<label for="myMessage">Message: </label>
-<input type="text" id="myMessage" size="20">
-<button id="sendButton" onclick=send()>Send</button>
-
+{% if user == None %}
+    Please, <a href="/login">login</a> or <a href="/register">register</a>
+{% else %}
+    Hello {{ user }} <br>
+    Chat is <a href="/chat">here</a>
+{% endif %}
 
 </body>
 </html>
