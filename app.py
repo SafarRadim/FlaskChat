@@ -2,7 +2,13 @@ from flask import Flask, render_template, redirect, request, session, url_for
 from flask_sqlalchemy import SQLAlchemy
 from forms import *
 
+from gevent import monkey
+from gevent.pywsgi import WSGIServer
+
 from flask_socketio import SocketIO, send
+
+
+monkey.patch_all()
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.db'
@@ -37,6 +43,7 @@ def handle_message(message):
     db.session.add(messageDb)
     db.session.commit()
     send((session['username']+'> '+message), broadcast=True)
+
 
 @app.route('/')
 def index():
@@ -89,7 +96,6 @@ def register():
         db.session.commit()
         return redirect(url_for('login'))
     return render_template("register.html", form=form)
-
 
 
 if __name__ == '__main__':

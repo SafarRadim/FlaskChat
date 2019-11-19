@@ -18,12 +18,12 @@ $(document).ready(function () {
 
     socket.on('message', function (msg) {
         $('#messages').append('<li>'+msg+"</li>");
-        console.log('recieved message');
+        console.log('recieved message: ' + msg);
     });
 
     $('#sendButton').on('click', function () {
-      socket.send($('#myMessage').val());
-      $('#myMessage').val('')
+        socket.send($('#myMessage').val());
+        $('#myMessage').val('')
     })
 
 })
@@ -36,7 +36,7 @@ $(document).ready(function () {
 </ul>
 <label for="myMessage">Message: </label>
 <input type="text" id="myMessage" size="20">
-<button id="sendButton" onclick=send()>Send</button>
+<button id="sendButton">Send</button>
 
 
 </body>
